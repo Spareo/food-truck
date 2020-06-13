@@ -1,0 +1,12 @@
+﻿Serilog:
+  Filter: 
+    - Name: ByExcluding
+      Args:
+        expression: "EndsWith(RequestPath, '/healthz') and @Level='Debug'"
+  MinimumLevel:
+    Default: Debug
+    Override:
+        System: Debug
+        Microsoft: Debug
+  Enrich:
+    - FromLogContext
