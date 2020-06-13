@@ -23,6 +23,18 @@ paths:
       responses:
         '200':
           description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FoodTruck'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '204':
+          description: Success
   '/api/v1/FoodTrucks/closest/{latitude}/{longitude}/{milesRadius}':
     get:
       tags:
@@ -49,4 +61,93 @@ paths:
       responses:
         '200':
           description: Success
-components: { }
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FoodTruck'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '204':
+          description: Success
+components:
+  schemas:
+    FacilityType:
+      enum:
+        - None
+        - Truck
+        - PushCart
+      type: string
+    PermitStatus:
+      enum:
+        - Inactive
+        - Requested
+        - Expired
+        - Suspend
+        - OnHold
+        - Approved
+        - Issued
+      type: string
+    FoodTruck:
+      type: object
+      properties:
+        locationId:
+          type: integer
+          format: int32
+        applicant:
+          type: string
+          nullable: true
+        facilityType:
+          $ref: '#/components/schemas/FacilityType'
+        locationDescription:
+          type: string
+          nullable: true
+        address:
+          type: string
+          nullable: true
+        permit:
+          type: string
+          nullable: true
+        status:
+          $ref: '#/components/schemas/PermitStatus'
+        foodItems:
+          type: string
+          nullable: true
+        latitude:
+          type: number
+          format: double
+        longitude:
+          type: number
+          format: double
+        schedule:
+          type: string
+          nullable: true
+        daysHours:
+          type: string
+          nullable: true
+      additionalProperties: false
+    ProblemDetails:
+      type: object
+      properties:
+        type:
+          type: string
+          nullable: true
+        title:
+          type: string
+          nullable: true
+        status:
+          type: integer
+          format: int32
+          nullable: true
+        detail:
+          type: string
+          nullable: true
+        instance:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+        additionalProperties: false
