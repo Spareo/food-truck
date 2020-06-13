@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
+using Serilog;
 using TinyCsvParser;
 
 namespace FoodTruck.Web
@@ -47,6 +48,8 @@ namespace FoodTruck.Web
             //var context = app.ApplicationServices.GetService<FoodTruckDbContext>();
             InitData(context);
 
+            app.UseSerilogRequestLogging();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -80,6 +83,8 @@ namespace FoodTruck.Web
             {
                 if (record.IsValid)
                     context.FoodTrucks.Add(record.Result);
+                else
+                    Log.Information($"Invalid record: {record.Error}");
             }
 
             context.SaveChanges();

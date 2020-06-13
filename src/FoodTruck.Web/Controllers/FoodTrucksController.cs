@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using FoodTruck.Core.Interfaces;
-using FoodTruck.Infrastructure.Data;
+﻿using FoodTruck.Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -24,8 +20,18 @@ namespace FoodTruck.Web.Controllers
         [HttpGet("closest/{latitude}/{longitude}")]
         public IActionResult GetClosestFoodTruck(double latitude, double longitude)
         {
-            var closestFoodTruck = _foodTruckProvider.GetClosestFoodTruck(latitude, longitude);
-            return Ok(closestFoodTruck); 
+            try
+            {
+                var closestFoodTruck = _foodTruckProvider.GetClosestFoodTruck(latitude, longitude);
+                if (closestFoodTruck != null)
+                    return Ok(closestFoodTruck);
+                else
+                    return NotFound();
+            }
+            catch
+            {
+                return BadRequest();
+            }
         }
     }
 }
