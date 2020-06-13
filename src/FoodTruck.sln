@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodTruck.Web", "FoodTruck.Web\FoodTruck.Web.csproj", "{7F5C4231-FD1A-4874-AD5E-E07971D1735D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodTruck.Core", "FoodTruck.Core\FoodTruck.Core.csproj", "{46EE416F-BEC2-4968-8500-D73227B97837}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodTruck.Infrastructure", "FoodTruck.Infrastructure\FoodTruck.Infrastructure.csproj", "{D223F3E4-F417-4952-8915-59661557478E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F5C4231-FD1A-4874-AD5E-E07971D1735D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F5C4231-FD1A-4874-AD5E-E07971D1735D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F5C4231-FD1A-4874-AD5E-E07971D1735D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F5C4231-FD1A-4874-AD5E-E07971D1735D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46EE416F-BEC2-4968-8500-D73227B97837}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46EE416F-BEC2-4968-8500-D73227B97837}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46EE416F-BEC2-4968-8500-D73227B97837}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46EE416F-BEC2-4968-8500-D73227B97837}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D223F3E4-F417-4952-8915-59661557478E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D223F3E4-F417-4952-8915-59661557478E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D223F3E4-F417-4952-8915-59661557478E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D223F3E4-F417-4952-8915-59661557478E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
