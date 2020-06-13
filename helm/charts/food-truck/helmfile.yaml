@@ -1,0 +1,22 @@
+helmDefaults:
+    tillerless: false 
+    verify: false
+    wait: true
+    timeout: 600
+    force: false
+    historyMax: 3
+  
+  # The desired states of Helm releases.
+  releases:
+    - name: food-trucks
+      chart: charts/food-trucks
+      namespace: foodbusiness
+      missingFileHandler: Error
+      values:
+      - environments/{{.Environment.Name}}/values.yaml
+  
+  # Advanced Configuration: Environments
+  environments:
+    dev: {}
+    stg: {}
+    prod: {}

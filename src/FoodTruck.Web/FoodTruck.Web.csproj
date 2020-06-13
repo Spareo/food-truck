@@ -8,13 +8,7 @@
       <GenerateDocumentationFile>true</GenerateDocumentationFile>
       <NoWarn>$(NoWarn);1591</NoWarn>
   </PropertyGroup>
-    
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="dotnet tool restore" />
-    <Exec Command="dotnet swagger tofile --output ../../swagger.yaml --yaml $(OutputPath)\$(AssemblyName).dll v1" />
-  </Target>
-
-
+  
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Resources\" />
