@@ -35,7 +35,7 @@ namespace FoodTruck.Web.Controllers
             {
                 var closestFoodTruck = _foodTruckProvider.GetClosestFoodTruck(latitude, longitude);
                 if (closestFoodTruck != null)
-                    return Ok(closestFoodTruck);
+                    return Json(closestFoodTruck);
                 else
                     return NoContent();
             }
@@ -60,7 +60,7 @@ namespace FoodTruck.Web.Controllers
             {
                 var closestFoodTrucks = _foodTruckProvider.GetClosestFoodTrucks(latitude, longitude, milesRadius);
                 if (closestFoodTrucks != null && closestFoodTrucks.Count() > 0)
-                    return Ok(closestFoodTrucks);
+                    return Json(closestFoodTrucks);
                 else
                     return NoContent();
             }

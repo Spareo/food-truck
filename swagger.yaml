@@ -64,7 +64,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/FoodTruck'
+                type: array
+                items:
+                  $ref: '#/components/schemas/FoodTruck'
         '400':
           description: Bad Request
           content:

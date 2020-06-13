@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodTruck.Core", "FoodTruck
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodTruck.Infrastructure", "FoodTruck.Infrastructure\FoodTruck.Infrastructure.csproj", "{D223F3E4-F417-4952-8915-59661557478E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodTruck.Tests", "FoodTruck.Tests\FoodTruck.Tests.csproj", "{87843FF8-2277-4F15-BF4C-F253A5C8303B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,5 +27,9 @@ Global
 		{D223F3E4-F417-4952-8915-59661557478E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D223F3E4-F417-4952-8915-59661557478E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D223F3E4-F417-4952-8915-59661557478E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87843FF8-2277-4F15-BF4C-F253A5C8303B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87843FF8-2277-4F15-BF4C-F253A5C8303B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87843FF8-2277-4F15-BF4C-F253A5C8303B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87843FF8-2277-4F15-BF4C-F253A5C8303B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

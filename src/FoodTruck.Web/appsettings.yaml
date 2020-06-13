@@ -10,15 +10,3 @@
         Microsoft: Debug
   Enrich:
     - FromLogContext
-SwaggerSettings: 
-  RoutePrefix: docs
-  Info: 
-    Title: "Food Trucks API"
-    Description: "Swagger with API version, <a href='/swagger.yaml'>download swagger.yaml</a>"
-    TermsOfService: "https://company.com/termsofservice"
-  Contact: 
-    Name: "Dmitry Khenkin"
-    Email: "dkhenkin@gmail.com"
-  License: 
-    Name: MIT
-    Url: "https://opensource.org/licenses/MIT"
