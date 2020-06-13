@@ -1,12 +1,3 @@
-
-<!-- toc -->
-- [Helm Deployments](#helm-deployments)
-  - [Prerequisites](#prerequisites)
-  - [Deploying Helm Charts](#deploying-helm-charts)
-  - [Destroying Helm Charts](#destroying-helm-charts)
-
-<!-- tocstop -->
-
 # Helm Deployments
 
 ## Prerequisites
