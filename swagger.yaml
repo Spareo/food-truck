@@ -1,0 +1,52 @@
+openapi: 3.0.1
+info:
+  title: Food Trucks Service API
+  version: v1
+paths:
+  '/api/v1/FoodTrucks/closest/{latitude}/{longitude}':
+    get:
+      tags:
+        - FoodTrucks
+      parameters:
+        - name: latitude
+          in: path
+          required: true
+          schema:
+            type: number
+            format: double
+        - name: longitude
+          in: path
+          required: true
+          schema:
+            type: number
+            format: double
+      responses:
+        '200':
+          description: Success
+  '/api/v1/FoodTrucks/closest/{latitude}/{longitude}/{milesRadius}':
+    get:
+      tags:
+        - FoodTrucks
+      parameters:
+        - name: latitude
+          in: path
+          required: true
+          schema:
+            type: number
+            format: double
+        - name: longitude
+          in: path
+          required: true
+          schema:
+            type: number
+            format: double
+        - name: milesRadius
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: Success
+components: { }
